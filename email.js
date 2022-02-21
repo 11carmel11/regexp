@@ -1,3 +1,5 @@
+const { alphanumericRegex } = require("./config");
+
 /**
  * * Usernames can contain letters (a-z), numbers (0-9), and periods (.).
  * * Usernames cannot contain [&, =, _, +, -, ,, ', <, >] or more then one period in a row.
@@ -6,7 +8,9 @@
  * @returns {boolean} Indication if an address is valid for gmail
  */
 const isGmail = (mail) => {
-  const regex = /^[0-9a-zA-Z]+\.?[0-9a-zA-Z]+@gmail\.com$/;
+  const regex = new RegExp(
+    `^${alphanumericRegex}+\.?${alphanumericRegex}+@gmail\.com$`
+  );
   return regex.test(mail);
 };
 
@@ -16,8 +20,9 @@ console.log(isGmail("11carmrl11@gmail.com"));
  like `isGmail` but for every email domain.
  */
 const isEmail = (mail) => {
-  // const alphanumericRegex = "[0-9a-zA-Z]";
-  const regex = /^[0-9a-zA-Z]+\.?[0-9a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+  const regex = new RegExp(
+    `^${alphanumericRegex}+\.?${alphanumericRegex}+[a-zA-Z]+\.[a-zA-Z]+$`
+  );
   return regex.test(mail);
 };
 
