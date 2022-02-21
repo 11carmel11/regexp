@@ -11,3 +11,14 @@ const isGmail = (mail) => {
 };
 
 console.log(isGmail("11carmrl11@gmail.com"));
+
+/**
+ like `isGmail` but for every email domain.
+ */
+const isEmail = (mail) => {
+  // const alphanumericRegex = "[0-9a-zA-Z]";
+  const regex = /^[0-9a-zA-Z]+\.?[0-9a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+  return regex.test(mail);
+};
+
+console.log(isEmail("11carmel11@walla.fakecom"));
