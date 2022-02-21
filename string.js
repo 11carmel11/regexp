@@ -18,3 +18,10 @@ const isKebabCase = (str) => {
 };
 
 console.log(isKebabCase("kebab-case"));
+
+const isSnakeCase = (str) => {
+  const regex = /^([a-z]+_)+[a-z]+$/;
+  return regex.test(str);
+};
+
+console.log(isSnakeCase("snake_case"));
