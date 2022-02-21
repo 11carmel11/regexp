@@ -13,8 +13,8 @@ const isCamelCase = (str) => {
 console.log(isCamelCase("camelCase"));
 
 const isKebabCase = (str) => {
-  const regex = /^[a-z]+([A-Z]+[a-z]*)*$/;
+  const regex = /^([a-z]+-)+[a-z]+$/;
   return regex.test(str);
 };
 
-console.log(isKebabCase("camelCase"));
+console.log(isKebabCase("kebab-case"));
