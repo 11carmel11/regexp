@@ -3,28 +3,20 @@ const isPascalCase = (str) => {
   return regex.test(str);
 };
 
-console.log(isPascalCase("PascalCase"));
-
 const isCamelCase = (str) => {
   const regex = /^[a-z]+([A-Z]+[a-z]*)*$/;
   return regex.test(str);
 };
-
-console.log(isCamelCase("camelCase"));
 
 const isKebabCase = (str) => {
   const regex = /^([a-z]+-)+[a-z]+$/;
   return regex.test(str);
 };
 
-console.log(isKebabCase("kebab-case"));
-
 const isSnakeCase = (str) => {
   const regex = /^([a-z]+_)+[a-z]+$/;
   return regex.test(str);
 };
-
-console.log(isSnakeCase("snake_case"));
 
 const whatAmI = (str) => {
   if (!str) return null;
@@ -38,4 +30,11 @@ const whatAmI = (str) => {
     }
   }
 };
-console.log(whatAmI("k_k"));
+
+module.exports = {
+  isPascalCase,
+  isCamelCase,
+  isKebabCase,
+  isSnakeCase,
+  whatAmI,
+};
