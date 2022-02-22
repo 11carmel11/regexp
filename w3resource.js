@@ -22,3 +22,13 @@ const trim = (str) => {
 };
 
 console.log(trim("  hello world     "));
+
+const countWordsInString = (str) => {
+  str = trim(str);
+  if (!str) return 0;
+  const regex = /\s+/g;
+  const dividedToWords = str.split(regex);
+  return dividedToWords.length;
+};
+
+console.log(countWordsInString("hello     world"));
