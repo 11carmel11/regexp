@@ -23,6 +23,7 @@ const trim = (str) => {
 
 console.log(trim("  hello world     "));
 
+// 6.
 const countWordsInString = (str) => {
   str = trim(str);
   if (!str) return 0;
@@ -32,3 +33,11 @@ const countWordsInString = (str) => {
 };
 
 console.log(countWordsInString("hello     world"));
+
+// 8.
+const countVowelsInString = (str) => {
+  const regex = /[aeiou]/gi;
+  return str.match(regex).length;
+};
+
+console.log(countVowelsInString("hello"));
