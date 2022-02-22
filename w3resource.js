@@ -5,3 +5,12 @@ const firstCharIsUpper = (str) => {
 };
 
 console.log(firstCharIsUpper("Cadae"));
+
+// 2.
+// starting with 34 or 37, length 15 digits.
+const isAmericanExpress = (ccNum) => {
+  const regex = /3[47]\d{13}/;
+  return regex.test(ccNum);
+};
+
+console.log(isAmericanExpress("345678901234567"));
