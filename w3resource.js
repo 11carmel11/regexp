@@ -12,10 +12,11 @@ exports.isAmericanExpress = (ccNum) => {
 };
 
 // 5.
-exports.trim = (str) => {
+const trim = (str) => {
   const trimmerRegex = /^\s+|\s+$/g;
   return str.replace(trimmerRegex, "");
 };
+exports.trim = trim;
 
 // 6.
 exports.countWordsInString = (str) => {

@@ -1,0 +1,23 @@
+{
+  "name": "regexp",
+  "version": "1.0.0",
+  "description": "regex learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11carmel11/regexp.git"
+  },
+  "keywords": [],
+  "author": "carmel-cohen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/11carmel11/regexp/issues"
+  },
+  "homepage": "https://github.com/11carmel11/regexp#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
