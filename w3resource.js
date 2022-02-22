@@ -66,3 +66,15 @@ const isHexadecimal = (str) => {
 };
 
 console.log(isHexadecimal("a3dfc"));
+
+// 19.
+const isHtml = (html) => {
+  const startIndex = html.indexOf("<") + 1;
+  const closeIndex = html.indexOf(">");
+  const tagName = html.slice(startIndex, closeIndex);
+
+  const regex = new RegExp(`^<${tagName}>[^><]*</${tagName}>`);
+  return regex.test(html);
+};
+
+console.log(isHtml("<f></f>"));
