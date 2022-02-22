@@ -41,3 +41,12 @@ const countVowelsInString = (str) => {
 };
 
 console.log(countVowelsInString("hello"));
+
+// 10.
+const { alphanumericRegex } = require("./config");
+const isAlphaNumeric = (str) => {
+  const regex = new RegExp(`^${alphanumericRegex}+$`);
+  return !!str && regex.test(str);
+};
+
+console.log(isAlphaNumeric("11carmel11"));
