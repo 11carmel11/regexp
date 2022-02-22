@@ -50,3 +50,11 @@ const isAlphaNumeric = (str) => {
 };
 
 console.log(isAlphaNumeric("11carmel11"));
+
+// 11.
+const isTimeString = (time) => {
+  const regex = /^(00|0?[1-9]|1[0-2])(:[0-5]\d){1,2}$/;
+  return regex.test(time);
+};
+
+console.log(isTimeString("00:23:59"));
