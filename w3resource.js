@@ -1,30 +1,24 @@
 // 1.
-const firstCharIsUpper = (str) => {
+exports.firstCharIsUpper = (str) => {
   const regex = /^[A-Z]/;
   return regex.test(str);
 };
 
-console.log(firstCharIsUpper("Cadae"));
-
 // 2.
 // starting with 34 or 37, length 15 digits.
-const isAmericanExpress = (ccNum) => {
+exports.isAmericanExpress = (ccNum) => {
   const regex = /3[47]\d{13}/;
   return regex.test(ccNum);
 };
 
-console.log(isAmericanExpress("345678901234567"));
-
 // 5.
-const trim = (str) => {
+exports.trim = (str) => {
   const trimmerRegex = /^\s+|\s+$/g;
   return str.replace(trimmerRegex, "");
 };
 
-console.log(trim("  hello world     "));
-
 // 6.
-const countWordsInString = (str) => {
+exports.countWordsInString = (str) => {
   str = trim(str);
   if (!str) return 0;
   const regex = /\s+/g;
@@ -32,43 +26,33 @@ const countWordsInString = (str) => {
   return dividedToWords.length;
 };
 
-console.log(countWordsInString("hello     world"));
-
 // 8.
-const countVowelsInString = (str) => {
+exports.countVowelsInString = (str) => {
   const regex = /[aeiou]/gi;
   return str.match(regex).length;
 };
 
-console.log(countVowelsInString("hello"));
-
 // 10.
 const { alphanumericRegex } = require("./config");
-const isAlphaNumeric = (str) => {
+exports.isAlphaNumeric = (str) => {
   const regex = new RegExp(`^${alphanumericRegex}+$`);
   return !!str && regex.test(str);
 };
 
-console.log(isAlphaNumeric("11carmel11"));
-
 // 11.
-const isTimeString = (time) => {
+exports.isTimeString = (time) => {
   const regex = /^(00|0?[1-9]|1[0-2])(:[0-5]\d){1,2}$/;
   return regex.test(time);
 };
 
-console.log(isTimeString("00:23:59"));
-
 // 16.
-const isHexadecimal = (str) => {
+exports.isHexadecimal = (str) => {
   const regex = /^[0-9a-fA-F]+$/;
   return regex.test(str);
 };
 
-console.log(isHexadecimal("a3dfc"));
-
 // 19.
-const isHtml = (html) => {
+exports.isHtml = (html) => {
   const startIndex = html.indexOf("<") + 1;
   const closeIndex = html.indexOf(">");
   const tagName = html.slice(startIndex, closeIndex);
@@ -76,5 +60,3 @@ const isHtml = (html) => {
   const regex = new RegExp(`^<${tagName}>[^><]*</${tagName}>`);
   return regex.test(html);
 };
-
-console.log(isHtml("<f></f>"));
