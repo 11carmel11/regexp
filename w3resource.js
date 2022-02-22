@@ -58,3 +58,11 @@ const isTimeString = (time) => {
 };
 
 console.log(isTimeString("00:23:59"));
+
+// 16.
+const isHexadecimal = (str) => {
+  const regex = /^[0-9a-fA-F]+$/;
+  return regex.test(str);
+};
+
+console.log(isHexadecimal("a3dfc"));
