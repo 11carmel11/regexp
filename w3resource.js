@@ -14,3 +14,11 @@ const isAmericanExpress = (ccNum) => {
 };
 
 console.log(isAmericanExpress("345678901234567"));
+
+// 5.
+const trim = (str) => {
+  const trimmerRegex = /^\s+|\s+$/g;
+  return str.replace(trimmerRegex, "");
+};
+
+console.log(trim("  hello world     "));
